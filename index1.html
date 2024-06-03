@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Assignment 2</title>
+</head>
+
+<body>
+  <script>
+    let aValue = prompt('Enter number A: ');
+    let operator = prompt('Enter math symbol: ');
+    let bValue = prompt('Enter number B:');
+
+    let a = parseFloat(aValue);
+    let b = parseFloat(bValue);
+    if (isNaN(a) || isNaN(b) ||
+      ("" + a).length != aValue.length || ("" + b).length != bValue.length) {
+      alert("The value of one of the operands is not numerical!");
+    }
+    else {
+      switch (operator) {
+        case '+':
+          alert(a + b);
+
+          break;
+        case '-':
+          alert(a - b);
+
+          break;
+        case '*':
+          alert(a * b);
+
+          break;
+
+        case '/':
+          if (b == 0) {
+            alert("Division by 0 cannot be done!");
+          }
+          else {
+            alert(a / b);
+          }
+
+          break;
+
+        default:
+          alert("Mathematical operation" + operator + "it is not elementary!");
+      }
+    }
+  </script>
+</body>
+
+</html>
